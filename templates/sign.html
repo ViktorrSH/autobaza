@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить автомобиль</title>
+</head>
+<body>
+<form class="form-signin" method="POST" action="{% url 'addcar' %}">
+    {% csrf_token %}
+    <p>{{ form.name }}</p>
+    <p>{{ form.country }}</p>
+
+    <input type="submit" value="добавить автомобиль">
+
+</form>
+</body>
+</html>

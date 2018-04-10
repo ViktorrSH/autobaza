@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+<div><a href="{% url 'addcar' %}">Добавить автомобиль</a></div>
+
+{% for c in car %}
+    <h1>Производитель : {{ c.name }}</h1>
+    <h2>Страна: {{ c.country }}</h2>
+{% endfor %}
+</body>
+</html>
